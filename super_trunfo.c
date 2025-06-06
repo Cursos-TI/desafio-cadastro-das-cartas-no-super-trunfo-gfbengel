@@ -7,6 +7,8 @@ int main() {
     float area1, area2;
     float pib1, pib2;
     int pontos_turisticos1, pontos_turisticos2;
+    float densidade1, densidade2;
+    float pib_per_capita1, pib_per_capita2;
 
     // Cadastro da primeira carta
     printf("Cadastro da Carta 1\n");
@@ -34,6 +36,12 @@ int main() {
     printf("Número de pontos turísticos: ");
     scanf("%d", &pontos_turisticos2);
 
+    // Cálculo dos atributos derivados
+    densidade1 = populacao1 / area1;
+    densidade2 = populacao2 / area2;
+    pib_per_capita1 = pib1 / populacao1;
+    pib_per_capita2 = pib2 / populacao2;
+
     // Exibição dos dados cadastrados
     printf("\nDados da Carta 1:\n");
     printf("Código: %s\n", codigo1);
@@ -41,6 +49,8 @@ int main() {
     printf("Área: %.2f\n", area1);
     printf("PIB: %.2f\n", pib1);
     printf("Número de pontos turísticos: %d\n", pontos_turisticos1);
+    printf("Densidade Populacional: %.2f\n", densidade1);
+    printf("PIB per Capita: %.2f\n", pib_per_capita1);
 
     printf("\nDados da Carta 2:\n");
     printf("Código: %s\n", codigo2);
@@ -48,6 +58,8 @@ int main() {
     printf("Área: %.2f\n", area2);
     printf("PIB: %.2f\n", pib2);
     printf("Número de pontos turísticos: %d\n", pontos_turisticos2);
+    printf("Densidade Populacional: %.2f\n", densidade2);
+    printf("PIB per Capita: %.2f\n", pib_per_capita2);
 
     return 0;
 } 
